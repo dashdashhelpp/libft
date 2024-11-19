@@ -20,7 +20,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	i = 0;
-	sub_str = malloc(sizeof(char) * (len + 1));
 	if (sub_str == NULL)
 		return (NULL);
 	if (start >= ft_strlen(s))
@@ -28,6 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub_str[i] = '\0';
 		return (sub_str);
 	}
+	sub_str = malloc(sizeof(char) * (len + 1));
 	while (s[start + i] && i < len)
 	{
 		sub_str[i] = s[start + i];

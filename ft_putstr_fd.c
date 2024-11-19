@@ -19,7 +19,5 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	i = ft_strlen(s);
-	if (!(fd >= 0 && fd <= 3))
-		return ;
 	write(fd, s, i);
 }

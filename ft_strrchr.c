@@ -15,12 +15,12 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	char	*temp;
+	char		*temp;
+	unsigned char	a;
 
 	i = 0;
+	a = (unsigned char)(c);
 	temp = (char *)s;
-	if ((c < 0) || (c > 127))
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == c)

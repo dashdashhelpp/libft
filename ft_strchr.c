@@ -15,8 +15,10 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
+	unsigned char	a;
 
 	i = 0;
+	a = (unsigned char)(c);
 	while (s[i])
 	{
 		if (s[i] == c)
