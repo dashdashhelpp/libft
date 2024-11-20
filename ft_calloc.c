@@ -15,12 +15,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*array;
-	size_t	n;
+	size_t	total;
 
-	n = nmemb * size;
 	if ((nmemb == 0) || (size == 0))
 		return (array = malloc(0));
-	if (n / nmemb != size);
+	total = nmemb * size;
+	if (total / size != nmemb)
 		return (NULL);
 	array = malloc(nmemb * size);
 	if (array == NULL)
