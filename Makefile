@@ -16,7 +16,7 @@ SOURCES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.
 
 BONUSSOURCES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -42,9 +42,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES) $(BONUSSOURCES)
-	gcc -nostartfiles -shared -o libft.so $(OBJECTS) $(BONUSOBJECTS)
 
 .PHONY: all clean fclean re bonus
