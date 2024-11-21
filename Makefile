@@ -29,7 +29,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
 
-bonus: $(OBJECTS) $(BONUSOBJECTS)
+bonus: all $(BONUSOBJECTS)
 	$(AR) -r $(NAME) $?
 
 %.o: %.c
