@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnorris <lnorris@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:44:04 by lnorris           #+#    #+#             */
-/*   Updated: 2024/11/18 19:44:07 by lnorris          ###   ########.fr       */
+/*   Updated: 2024/11/23 21:27:58 by lnorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		temp = ft_lstnew((*f)(lst->content));
 		if (!temp)
 		{
-			free(lst->content);
 			while (temp_list)
 			{
 				temp = temp_list->next;
